@@ -177,12 +177,12 @@ def main():
     unsafe_allow_html=True,
         )
     
-    st.sidebar.title("Menu")
-    
-    embedding_option = st.sidebar.radio(
-        "Choose Embeddings", ["OpenAI Embeddings"])
-    retriever_type = st.sidebar.selectbox(
-        "Choose Retriever", ["SIMILARITY SEARCH", "SUPPORT VECTOR MACHINES"])
+    st.sidebar.title("History")
+    st.sidebar.button("first chat")
+    # embedding_option = st.sidebar.radio(
+    #     "Choose Embeddings", ["OpenAI Embeddings"])
+    # retriever_type = st.sidebar.selectbox(
+    #     "Choose Retriever", ["SIMILARITY SEARCH", "SUPPORT VECTOR MACHINES"])
 
     # Use RecursiveCharacterTextSplitter as the default and only text splitter
     splitter_type = "RecursiveCharacterTextSplitter"
