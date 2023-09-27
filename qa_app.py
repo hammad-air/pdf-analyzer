@@ -131,7 +131,6 @@ def main():
             .css-card {
                 border-radius: 0px;
                 padding: 30px 10px 10px 10px;
-                background-color: #f8f9fa;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 margin-bottom: 10px;
                 font-family: "IBM Plex Sans", sans-serif;
@@ -168,7 +167,7 @@ def main():
         """,
         unsafe_allow_html=True,
     )
-    st.sidebar.image("img/logo1.png")
+    st.sidebar.image("img/quran.png")
    
     st.write(
     f"""
@@ -178,12 +177,12 @@ def main():
     unsafe_allow_html=True,
         )
     
-    st.sidebar.title("Menu")
-    
-    embedding_option = st.sidebar.radio(
-        "Choose Embeddings", ["OpenAI Embeddings"])
-    retriever_type = st.sidebar.selectbox(
-        "Choose Retriever", ["SIMILARITY SEARCH", "SUPPORT VECTOR MACHINES"])
+    st.sidebar.title("History")
+    st.sidebar.button("first chat")
+    # embedding_option = st.sidebar.radio(
+    #     "Choose Embeddings", ["OpenAI Embeddings"])
+    # retriever_type = st.sidebar.selectbox(
+    #     "Choose Retriever", ["SIMILARITY SEARCH", "SUPPORT VECTOR MACHINES"])
 
     # Use RecursiveCharacterTextSplitter as the default and only text splitter
     splitter_type = "RecursiveCharacterTextSplitter"
